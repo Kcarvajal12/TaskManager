@@ -1,0 +1,23 @@
+{
+  "name": "taskmanager",
+  "version": "1.0.0",
+  "description": "Sistema de gestión de tareas con pruebas automatizadas usando Selenium WebDriver y JavaScript",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "mocha \"tests/**/*.test.js\" --timeout 120000",
+    "test:report": "mocha \"tests/**/*.test.js\" --timeout 120000 --reporter mochawesome --reporter-options reportDir=reports,reportFilename=selenium-report,overwrite=true,html=true,json=true"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "express-session": "^1.18.2"
+  },
+  "devDependencies": {
+    "mocha": "^11.7.1",
+    "mochawesome": "^7.1.3",
+    "selenium-webdriver": "^4.34.0"
+  }
+}

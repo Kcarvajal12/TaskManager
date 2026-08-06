@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        TaskManager | Iniciar sesión
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="/css/styles.css"
+    >
+
+</head>
+
+
+<body class="login-page">
+
+
+<div class="login-container">
+
+
+    <div class="logo">
+        TM
+    </div>
+
+
+    <h1>
+        TaskManager
+    </h1>
+
+
+    <p class="subtitle">
+        Sistema de Gestión de Tareas
+    </p>
+
+
+    <% if (error) { %>
+
+        <div
+            id="loginError"
+            class="alert-error"
+        >
+
+            <%= error %>
+
+        </div>
+
+    <% } %>
+
+
+    <form
+        id="loginForm"
+        method="POST"
+        action="/login"
+    >
+
+
+        <label for="username">
+
+            Usuario
+
+        </label>
+
+
+        <input
+            id="username"
+            name="username"
+            type="text"
+            placeholder="Ingrese su usuario"
+            autocomplete="off"
+        >
+
+
+        <label for="password">
+
+            Contraseña
+
+        </label>
+
+
+        <input
+            id="password"
+            name="password"
+            type="password"
+            placeholder="Ingrese su contraseña"
+        >
+
+
+        <button
+            id="btnLogin"
+            type="submit"
+        >
+
+            Iniciar sesión
+
+        </button>
+
+
+    </form>
+
+
+    <div class="credentials">
+
+        <strong>
+            Usuario de demostración
+        </strong>
+
+        <br><br>
+
+        Usuario:
+
+        <strong>
+            admin
+        </strong>
+
+        <br>
+
+        Contraseña:
+
+        <strong>
+            123456
+        </strong>
+
+    </div>
+
+
+</div>
+
+
+</body>
+
+</html>
